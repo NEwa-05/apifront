@@ -1,0 +1,17 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: apifront-tls
+  namespace: apifront
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`apifront.apidprep.demo.traefiklabs.tech`)
+      services:
+        - name: apifront-v1
+          port: 80
+  tls:
+    certResolver: default

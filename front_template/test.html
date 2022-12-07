@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Call api</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).on("click", '#modifybtn', function(event) { 
+            var id = $(this).val();
+            event.preventDefault(); 
+            $.ajax({
+              url: '/ajax',
+              type: 'get',
+                success: function(response) {
+                  $('#modify').html(response); 
+                }
+            });
+        })
+        </script>
+    </head>
+<body>
+    <div>
+        <form action="/login" method="post">
+            id:<input type="text" name="id">
+            <input type="submit" value="Login">
+            <button id="modifybtn">Modify</button>
+        </form>
+            <div id="modify"></div>
+        
+            </div>
+    </div>
+
+
+</body>
+</html>

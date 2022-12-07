@@ -1,0 +1,41 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: apifront-v1
+  namespace: apifront
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: apifront-v1
+  template:
+    metadata:
+      labels:
+        app: apifront-v1
+    spec:
+      containers:
+      - name: apifront-v1
+        image: newa/apifront:0.1
+        imagePullPolicy: Always
+        env:
+          - name: API_URL
+            value: "https://api.catalogopolis.xyz/v1/episodes/12"
+          - name: APP_PORT
+            value: ":80"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: apifront-v1
+  namespace: apifront
+  labels:
+    app: apifront-v1
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    name: apifront-v1
+  selector:
+    app: apifront-v1

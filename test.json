@@ -1,0 +1,338 @@
+{
+    "links": [
+      {
+        "rel": "self",
+        "href": "https://data.ratp.fr/api/v2/catalog/facets"
+      },
+      {
+        "rel": "source",
+        "href": "https://data.ratp.fr/api/v2/catalog"
+      }
+    ],
+    "facets": [
+      {
+        "name": "features",
+        "facets": [
+          {
+            "name": "analyze",
+            "count": 19,
+            "state": "displayed",
+            "value": "analyze"
+          },
+          {
+            "name": "timeserie",
+            "count": 6,
+            "state": "displayed",
+            "value": "timeserie"
+          },
+          {
+            "name": "geo",
+            "count": 3,
+            "state": "displayed",
+            "value": "geo"
+          },
+          {
+            "name": "calendar",
+            "count": 1,
+            "state": "displayed",
+            "value": "calendar"
+          },
+          {
+            "name": "custom_view",
+            "count": 1,
+            "state": "displayed",
+            "value": "custom_view"
+          },
+          {
+            "name": "image",
+            "count": 1,
+            "state": "displayed",
+            "value": "image"
+          }
+        ]
+      },
+      {
+        "name": "modified",
+        "facets": [
+          {
+            "name": "2015",
+            "count": 3,
+            "state": "displayed",
+            "value": "2015"
+          },
+          {
+            "name": "2016",
+            "count": 2,
+            "state": "displayed",
+            "value": "2016"
+          },
+          {
+            "name": "2017",
+            "count": 3,
+            "state": "displayed",
+            "value": "2017"
+          },
+          {
+            "name": "2019",
+            "count": 2,
+            "state": "displayed",
+            "value": "2019"
+          },
+          {
+            "name": "2020",
+            "count": 2,
+            "state": "displayed",
+            "value": "2020"
+          },
+          {
+            "name": "2021",
+            "count": 2,
+            "state": "displayed",
+            "value": "2021"
+          },
+          {
+            "name": "2022",
+            "count": 10,
+            "state": "displayed",
+            "value": "2022"
+          }
+        ]
+      },
+      {
+        "name": "publisher",
+        "facets": [
+          {
+            "name": "RATP",
+            "count": 22,
+            "state": "displayed",
+            "value": "RATP"
+          },
+          {
+            "name": "Ville de Paris",
+            "count": 1,
+            "state": "displayed",
+            "value": "Ville de Paris"
+          }
+        ]
+      },
+      {
+        "name": "keyword",
+        "facets": [
+          {
+            "name": "Comptage",
+            "count": 11,
+            "state": "displayed",
+            "value": "Comptage"
+          },
+          {
+            "name": "Fréquentation",
+            "count": 10,
+            "state": "displayed",
+            "value": "Fréquentation"
+          },
+          {
+            "name": "Trafic",
+            "count": 10,
+            "state": "displayed",
+            "value": "Trafic"
+          },
+          {
+            "name": "Qualité de l'air",
+            "count": 5,
+            "state": "displayed",
+            "value": "Qualité de l'air"
+          },
+          {
+            "name": "RER",
+            "count": 5,
+            "state": "displayed",
+            "value": "RER"
+          },
+          {
+            "name": "Métro",
+            "count": 4,
+            "state": "displayed",
+            "value": "Métro"
+          },
+          {
+            "name": "Couleur",
+            "count": 3,
+            "state": "displayed",
+            "value": "Couleur"
+          },
+          {
+            "name": "Signalétique",
+            "count": 3,
+            "state": "displayed",
+            "value": "Signalétique"
+          },
+          {
+            "name": "Bus",
+            "count": 2,
+            "state": "displayed",
+            "value": "Bus"
+          },
+          {
+            "name": "Châtelet",
+            "count": 2,
+            "state": "displayed",
+            "value": "Châtelet"
+          },
+          {
+            "name": "Sanisettes",
+            "count": 2,
+            "state": "displayed",
+            "value": "Sanisettes"
+          },
+          {
+            "name": "Toilettes publiques",
+            "count": 2,
+            "state": "displayed",
+            "value": "Toilettes publiques"
+          },
+          {
+            "name": "Tramway",
+            "count": 2,
+            "state": "displayed",
+            "value": "Tramway"
+          },
+          {
+            "name": "WC",
+            "count": 2,
+            "state": "displayed",
+            "value": "WC"
+          },
+          {
+            "name": "Annuaire",
+            "count": 1,
+            "state": "displayed",
+            "value": "Annuaire"
+          },
+          {
+            "name": "Auber",
+            "count": 1,
+            "state": "displayed",
+            "value": "Auber"
+          },
+          {
+            "name": "Billetique",
+            "count": 1,
+            "state": "displayed",
+            "value": "Billetique"
+          },
+          {
+            "name": "Contacts",
+            "count": 1,
+            "state": "displayed",
+            "value": "Contacts"
+          },
+          {
+            "name": "DAE",
+            "count": 1,
+            "state": "displayed",
+            "value": "DAE"
+          },
+          {
+            "name": "Défibrillateur",
+            "count": 1,
+            "state": "displayed",
+            "value": "Défibrillateur"
+          },
+          {
+            "name": "Dépositaire",
+            "count": 1,
+            "state": "displayed",
+            "value": "Dépositaire"
+          },
+          {
+            "name": "Franklin D. Roosevelt",
+            "count": 1,
+            "state": "displayed",
+            "value": "Franklin D. Roosevelt"
+          },
+          {
+            "name": "Nation",
+            "count": 1,
+            "state": "displayed",
+            "value": "Nation"
+          },
+          {
+            "name": "Noctilien",
+            "count": 1,
+            "state": "displayed",
+            "value": "Noctilien"
+          },
+          {
+            "name": "Pictogrammes",
+            "count": 1,
+            "state": "displayed",
+            "value": "Pictogrammes"
+          },
+          {
+            "name": "Points de vente",
+            "count": 1,
+            "state": "displayed",
+            "value": "Points de vente"
+          },
+          {
+            "name": "Secours",
+            "count": 1,
+            "state": "displayed",
+            "value": "Secours"
+          },
+          {
+            "name": "Titres de transport",
+            "count": 1,
+            "state": "displayed",
+            "value": "Titres de transport"
+          },
+          {
+            "name": "Téléphone",
+            "count": 1,
+            "state": "displayed",
+            "value": "Téléphone"
+          }
+        ]
+      },
+      {
+        "name": "theme",
+        "facets": [
+          {
+            "name": "Transports, Déplacements",
+            "count": 16,
+            "state": "displayed",
+            "value": "Transports, Déplacements"
+          },
+          {
+            "name": "Environnement",
+            "count": 5,
+            "state": "displayed",
+            "value": "Environnement"
+          },
+          {
+            "name": "Aménagement du territoire, Urbanisme, Bâtiments, Equipements, Logement",
+            "count": 2,
+            "state": "displayed",
+            "value": "Aménagement du territoire, Urbanisme, Bâtiments, Equipements, Logement"
+          },
+          {
+            "name": "Défibrillateur",
+            "count": 1,
+            "state": "displayed",
+            "value": "Défibrillateur"
+          }
+        ]
+      },
+      {
+        "name": "language",
+        "facets": [
+          {
+            "name": "fr",
+            "count": 23,
+            "state": "displayed",
+            "value": "fr"
+          }
+        ]
+      }
+    ]
+  }
