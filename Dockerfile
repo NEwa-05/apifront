@@ -8,5 +8,6 @@ RUN GOARCH=amd64 GOOS=linux CGO_ENABLED=0 go build -a -installsuffix cgo -o apif
 FROM alpine
 WORKDIR /
 COPY --from=builder /app/apifront .
-COPY front_template/test.html .
+COPY front_template/index.html .
+COPY front_template/data.html .
 CMD ["./apifront"]

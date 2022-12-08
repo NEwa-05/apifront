@@ -3,41 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Call api</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script type="text/javascript">
-			var getCookies = function(){
-            	var pairs = document.cookie.split(";");
-            	var cookies = {};
-            	for (var i=0; i<pairs.length; i++){
-            	  var pair = pairs[i].split("=");
-            	  cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
-            	}
-            	return cookies;
-			}
-            var myCookies = getCookies();
-            console.log(myCookies);
-	    	$(document).ready(function(){
-				$("button").click, function(){
-					$.ajax({
-						dataType: "json",
-         				async: true,
-          				crossDomain: true,
-                        url: "/ajax",
-						method: "GET",
-						success: function(data) {
-							$("#response").html(data),
-							console.log(data)
-						},
-						error: function( xhr, status ) {
-                          alert( "Sorry, there was a problem!" )
-                        }
-					})
-				}
-			})
-		</script>
-	</head>
-	<body>
-		<button>Execute Command</button>
-		<div id="response"></div>
-	</body>
+    </head>
+<body>
+    <div>
+        <form action="/data" method="post">
+            ID:<input type="text" name="id"/><br>
+            <button type="submit">Results</button>
+        </form>
+    </div>
+</body>
 </html>
