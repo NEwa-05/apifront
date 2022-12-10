@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <link rel="stylesheet" href="/static/style.css">
+		<title>Call api</title>
+    </head>
+<body>
+    <div class="parent">
+        <div>
+            <img src="/static/traefik_logo.png" alt="traefik_logo" style="width:95%;">
+        </div>
+        <div>
+            <img src="/static/apidays_logo.png" alt="apidays_logo">
+        </div>
+    </div>
+    <div class="center-div-title">
+        <h2>Get data from The API</h2>
+    </div>   
+    <br>
+    <div class="center-div">
+        <form action="/getdata" method="post">
+            <b>ID to search:</b><br><input type="text" name="id"/><br>
+            <br>
+            <b>Token JWT:</b><br><input type="text" name="token"/><br>
+            <br>
+            <button type="submit">Results</button>
+        </form>
+    </div>
+    <br>
+    <div class="center-div-title">
+        <h2> Post data to the API </h2>
+    </div>
+    <br>
+    <div class="center-div">
+        <form action="/postdata" method="post">
+            <b>New data:</b><br><input type="text" name="data"/><br>
+            <br>
+            <b>Token JWT:</b><br><input type="text" name="token"/><br>
+            <br>
+            <button type="submit">Send Data</button>
+        </form>
+    </div>
+    </align>
+</body>
+</html>

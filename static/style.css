@@ -1,0 +1,16 @@
+.parent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10%;   
+    background-color: rgba(29, 113, 149, 0.733); 
+}
+
+.center-div-title {
+    margin: 0 auto;
+    width: 20%;
+}
+
+.center-div {
+    margin: 0 auto;
+    width: 15%;
+}

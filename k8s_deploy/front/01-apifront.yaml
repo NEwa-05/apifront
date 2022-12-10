@@ -20,7 +20,7 @@ spec:
         imagePullPolicy: Always
         env:
           - name: API_URL
-            value: "https://api.catalogopolis.xyz/v1/episodes/12"
+            value: "https://api.catalogopolis.xyz/v1/episodes"
           - name: APP_PORT
             value: ":80"
 

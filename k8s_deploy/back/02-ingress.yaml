@@ -1,0 +1,17 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: apiback-tls
+  namespace: apiback
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`apiback.apidprep.demo.traefiklabs.tech`)
+      services:
+        - name: apiback-v1
+          port: 80
+  tls:
+    certResolver: default

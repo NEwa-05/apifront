@@ -1,0 +1,39 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: apiback-v1
+  namespace: apiback
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: apiback-v1
+  template:
+    metadata:
+      labels:
+        app: apiback-v1
+    spec:
+      containers:
+      - name: apiback-v1
+        image: newa/postdata_backend:1.0
+        imagePullPolicy: Always
+        env:
+          - name: APP_PORT
+            value: ":80"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: apiback-v1
+  namespace: apiback
+  labels:
+    app: apiback-v1
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    name: apiback-v1
+  selector:
+    app: apiback-v1

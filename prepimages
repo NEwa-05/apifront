@@ -1,0 +1,25 @@
+export GOPATH=$HOME/go
+export GOROOT=/opt/homebrew/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
+docker buildx build -t newa/postdata_backend:1.3 --platform linux/amd64 -f postdata_backend/Dockerfile . --push
+docker buildx build -t newa/apifront:1.9 --platform linux/amd64 -f apifront/Dockerfile . --push
+
+
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{
+    "id": "12023",
+    "title": "Dalek on a shelf",
+    "serialID": 12023,
+    "episodeOrder": "2.0",
+    "originalAirDate": "2026-12-23",
+    "runtime": "43:22",
+    "ukViewersMM": 12.4,
+    "appreciationIndex": 59
+}' \
+  http://localhost:1080/newepisode
+
+
+  		Episode{ID: "1202", Title: "Dalek on a shelf", SerialID: 1202, EpisodeOrder: "2.0", OriginalAirDate: "2026-12-23", Runtime: "43:22", UKViewersMM: 12.4, AppreciationIndex: 59},
