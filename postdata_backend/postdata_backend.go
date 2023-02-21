@@ -13,50 +13,50 @@ import (
 
 var appPort = os.Getenv("APP_PORT")
 
-var Episodes []Episode
+var Lines []Line
 
-type Episode struct {
-	ID                string  `json:"id"`
-	Title             string  `json:"title"`
-	SerialID          int32   `json:"serialID"`
-	EpisodeOrder      string  `json:"episodeOrder,omitempty"`
-	OriginalAirDate   string  `json:"originalAirDate,omitempty"`
-	Runtime           string  `json:"runtime,omitempty"`
-	UKViewersMM       float32 `json:"ukViewersMM,omitempty"`
-	AppreciationIndex float32 `json:"appreciationIndex,omitempty"`
+type Line struct {
+	ID             string `json:"id"`
+	Name           string `json:"name"`
+	StartStation   string `json:"startStation,omitempty"`
+	EndStation     string `json:"endStation,omitempty"`
+	NumberStations int32  `json:"numberStations,omitempty"`
 }
 
 func postAPIHandler(w http.ResponseWriter, r *http.Request) {
 	reqBody, _ := io.ReadAll(r.Body)
-	var episode Episode
-	json.Unmarshal(reqBody, &episode)
-	Episodes = append(Episodes, episode)
-	json.NewEncoder(w).Encode(episode)
+	var line Line
+	json.Unmarshal(reqBody, &line)
+	Lines = append(Lines, line)
+	json.NewEncoder(w).Encode(line)
 
 }
 
-func returnSinglepisode(w http.ResponseWriter, r *http.Request) {
+func returnSingleLine(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	key := vars["id"]
 
-	for _, episode := range Episodes {
-		if episode.ID == key {
-			json.NewEncoder(w).Encode(episode)
+	for _, line := range Lines {
+		if line.ID == key {
+			json.NewEncoder(w).Encode(line)
 		}
 	}
 
 }
 
-func returnAllEpisodes(w http.ResponseWriter, r *http.Request) {
+func returnAllLines(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Endpoint Hit: returnAllEpisodes")
-	json.NewEncoder(w).Encode(Episodes)
+	json.NewEncoder(w).Encode(Lines)
 }
 
 func main() {
-	Episodes = []Episode{}
+	Lines = []Line{
+		Line{ID: "1", Name: "Ligne 1", StartStation: "La Défense - Grande Arche", EndStation: "Château de Vincennes", NumberStations: 25},
+		Line{ID: "2", Name: "Ligne 2", StartStation: "Porte Dauphine", EndStation: "Nation", NumberStations: 25},
+	}
 	myRouter := mux.NewRouter()
-	myRouter.HandleFunc("/newepisodes", returnAllEpisodes)
-	myRouter.HandleFunc("/newepisode", postAPIHandler).Methods("POST")
-	myRouter.HandleFunc("/newepisode/{id}", returnSinglepisode)
+	myRouter.HandleFunc("/newlines", returnAllLines)
+	myRouter.HandleFunc("/newline", postAPIHandler).Methods("POST")
+	myRouter.HandleFunc("/newline/{id}", returnSingleLine)
 	log.Fatal(http.ListenAndServe(appPort, myRouter))
 }

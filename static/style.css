@@ -1,9 +1,17 @@
-.parent{
+.wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 10%;   
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: 200px;
+    grid-template-areas:
+      ". a a .";
     background-color: rgba(29, 113, 149, 0.733); 
-}
+  }
+  .item1 {
+    grid-area: a;
+    align-self: center;
+    justify-self: center;
+  }
 
 .center-div-title {
     margin: 0 auto;
